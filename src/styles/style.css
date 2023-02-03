@@ -63,7 +63,7 @@ img {
   background-position: top;
   position: relative;
   */
-  grid-template-columns: minmax(900px, 80vw);
+  grid-template-columns: minmax(800px, 80vw);
   grid-template-rows: 70px 400px minmax(900px, 1fr) 60px;
   grid-template-areas: 
   "nav"
@@ -122,11 +122,10 @@ img {
   grid-area: main;
   background-color: var(--black-detail);
   display: grid;
-  grid-template-columns: 1fr 35%;
+  grid-template-columns: 65% 35%;
   grid-template-rows: 1fr;
   grid-template-areas:
   "main-left main-right";
-  column-gap: 15px;
 }
 
 #left-main {
@@ -139,6 +138,7 @@ img {
   grid-area: main-right;
   display: flex;
   flex-direction: column;
+  margin-left: 15px;
 }
 
 .square-button {
@@ -169,7 +169,6 @@ img {
 }
 
 .title-div-two {
-  width: 100%;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -280,7 +279,79 @@ img {
 }
 
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
 
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    row-gap: 30px;
+  }
+  
+  .nav {
+    display: flex;
+  }
+  
+  .intro {
+    background-color: var(--black-detail);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-section-two {
+    justify-self: left;
+  }
+  
+  .intro-section-three {
+    padding: 30px;
+    font-size: calc(14px + 0.4vw);
+  }
+  
+  .main {
+    background-color: var(--black-detail);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #left-main {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #right-main {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 30px 30px;
+  }
+
+  .main-section-container {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 100%;
+    row-gap: 10px;
+    
+  }
+  
+  .title-div {
+    background: #222222;
+    display: flex;
+    justify-content: left;
+  }
+  
+  .title-div-two {
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+  }
+}
 
 
 
