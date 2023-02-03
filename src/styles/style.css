@@ -16,7 +16,7 @@ fieldset{border-width:0; padding:0; margin:0;}
 
 /** Style **/
 html { 
-    font-size: calc(10px + 0.4vw);
+  font-size: calc(10px + 0.4vw);
 }
  
 body {
@@ -64,7 +64,7 @@ img {
   position: relative;
   */
   grid-template-columns: minmax(850px, 80vw);
-  grid-template-rows: 70px 400px minmax(900px, 1fr) 60px;
+  grid-template-rows: 50px 400px minmax(900px, 1fr) 60px;
   grid-template-areas: 
   "nav"
   "intro"
@@ -75,8 +75,16 @@ img {
   justify-content: center;
 }
 
+/* THESE TWO CLASSES ADD ON TO STYLING OF BOOTSTRAP CLASSES*/
 .nav {
   grid-area: nav;
+  font-size: calc(14px + 0.4vw);
+  align-items: center;
+  margin-bottom: -30px;
+}
+
+.nav-link {
+  color: var(--font-white);
 }
 
 .intro {
@@ -110,6 +118,7 @@ img {
 .intro-section-two {
   grid-area: section-two;
   justify-self: left;
+  align-self: center;
 }
 
 .intro-section-three {
@@ -294,8 +303,17 @@ img {
     row-gap: 30px;
   }
   
+/* THESE TWO CLASSES ADD ON TO STYLING OF BOOTSTRAP CLASSES*/
   .nav {
+    height: 30px;
+    font-size: calc(14px + 0.4vw);
     display: flex;
+    align-items: center;
+    margin-bottom: -10px;
+  }
+
+  .nav-link {
+    color: var(--font-white);
   }
   
   .intro {
